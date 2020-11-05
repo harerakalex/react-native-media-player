@@ -190,11 +190,7 @@ public class MetadataManager {
      * Updates the current track
      * @param track The new track
      */
-<<<<<<< HEAD
-    public void updateMetadata(ExoPlayback playback, Track track) {
-=======
     public void updateMetadata(TrackMetadata track) {
->>>>>>> e5cc6974c399c548910320187a294cd709870475
         MediaMetadataCompat.Builder metadata = track.toMediaMetadata();
 
         RequestManager rm = Glide.with(service.getApplicationContext());

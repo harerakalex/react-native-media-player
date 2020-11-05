@@ -215,12 +215,8 @@ public class MusicManager implements OnAudioFocusChangeListener {
     public void onTrackUpdate(Integer prevIndex, long prevPos, Integer nextIndex, Track next) {
         Log.d(Utils.LOG, "onTrackUpdate");
 
-<<<<<<< HEAD
-        if(next != null) metadata.updateMetadata(playback, next);
-=======
         if(playback.shouldAutoUpdateMetadata() && next != null)
             metadata.updateMetadata(next);
->>>>>>> e5cc6974c399c548910320187a294cd709870475
 
         Bundle bundle = new Bundle();
         if (prevIndex != null) bundle.putInt("track", prevIndex);
